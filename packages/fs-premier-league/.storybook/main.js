@@ -10,7 +10,7 @@ module.exports = {
   ],
   "framework": "@storybook/react",
   "core": {
-    "builder": "webpack"
+    "builder": "webpack5"
   },
   "typescript": {
     "check": false,
