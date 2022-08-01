@@ -1,3 +1,22 @@
-nav {
-    color: red;
+@use "../abstracts/" as *;
+
+// Montserrat font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+
+$f-xs: 0.75rem;
+$f-sm: 0.875rem;
+$f-md: 1rem;
+$f-lg: 1.125rem;
+$f-xl: 1.25rem;
+$f-2xl: 1.5rem;
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $f-md;
+    line-height: 1.5rem;
+}
+
+h1 {
+    font-size: $f-2xl;
+    line-height: 2rem;
 }

@@ -1,6 +1,3 @@
-import React from "react";
-import "../sass/base/_typography.scss";
-
 interface Props {
 
 }
@@ -8,7 +5,8 @@ interface Props {
 function NavigationBar({}: Props) {
     return (
         <nav>
-            Hello, world!
+            <h1>Hello, world!</h1>
+            <p>This is nav</p>
         </nav>
     )
 }
