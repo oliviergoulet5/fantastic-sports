@@ -1,4 +1,5 @@
 import React from "react";
+import "../sass/base/_typography.scss";
 
 interface Props {
 
