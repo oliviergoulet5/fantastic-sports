@@ -35,6 +35,7 @@
     "eslint-plugin-storybook": "^0.6.1",
     "sass": "^1.54.0",
     "sb": "^6.5.9",
+    "storybook-addon-next": "^1.6.7",
     "typescript": "4.7.4",
     "webpack": "^5.74.0"
   }
