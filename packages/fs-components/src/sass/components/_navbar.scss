@@ -6,9 +6,19 @@
 
     .navbar-links {
         display: flex;
+        color: black;
         
-        & {
-            margin-right: 2rem;
+        a {
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
+    }
+
+    .navbar-links > * {
+        margin-right: 2rem;
     }
 }

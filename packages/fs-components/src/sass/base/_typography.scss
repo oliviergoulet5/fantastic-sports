@@ -9,6 +9,16 @@
     line-height: 1.5rem;
 }
 
+a {
+    @extend .text-primary-500;
+
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 h1 {
     font-size: $f-2xl;
     line-height: 2rem;
