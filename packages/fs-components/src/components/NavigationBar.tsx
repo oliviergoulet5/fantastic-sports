@@ -1,24 +1,20 @@
+import { PropsWithChildren } from "react";
+
 interface PageLink {
     text: string;
     slug: string;
 }
 
-interface Props {
-    links: PageLink[];
-}
+interface Props {}
 
-function NavigationBar({ links }: Props) {
-
-    const renderLinks = links.map(link => 
-        <span>{ link.text }</span>
-    );
+function NavigationBar({ children }: PropsWithChildren<Props>) {
 
     return (
         <nav className="navbar">
            <div>
             </div>
             <div className="navbar-links">
-                { renderLinks }
+                { children }
             </div>
         </nav>
     )
