@@ -7,4 +7,23 @@ export default {
     component: NavigationBar
 }
 
-export const NavigationBarComponent = () => <NavigationBar />
+const pageLinks = [
+    {
+        text: "Home",
+        slug: "/home"
+    },
+    {
+        text: "About Us",
+        slug: "/about"
+    },
+    {
+        text: "Community",
+        slug: "/community"
+    },
+    {
+        text: "Donate",
+        slug: "/donate"
+    }
+]
+
+export const NavigationBarComponent = () => <NavigationBar links={ pageLinks } />

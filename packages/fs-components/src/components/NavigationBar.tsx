@@ -1,12 +1,25 @@
-interface Props {
-
+interface PageLink {
+    text: string;
+    slug: string;
 }
 
-function NavigationBar({}: Props) {
+interface Props {
+    links: PageLink[];
+}
+
+function NavigationBar({ links }: Props) {
+
+    const renderLinks = links.map(link => 
+        <span>{ link.text }</span>
+    );
+
     return (
-        <nav>
-            <h1>Hello, world!</h1>
-            <p>This is nav</p>
+        <nav className="navbar">
+           <div>
+            </div>
+            <div className="navbar-links">
+                { renderLinks }
+            </div>
         </nav>
     )
 }
