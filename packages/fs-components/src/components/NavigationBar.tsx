@@ -1,23 +1,26 @@
 import { PropsWithChildren } from "react";
+import CenteredNavigationBar from "./navigation-bars/CenteredNavigationBar";
 
-interface PageLink {
-    text: string;
-    slug: string;
+type NavigationBarType = "centered";
+
+interface Props {
+    type?: NavigationBarType; 
 }
 
-interface Props {}
+function NavigationBar({ type = "centered", ...props }: PropsWithChildren<Props>) {
+    let renderNavigationBar: JSX.Element;
+    
+    switch(type) {
+        case "centered":
+            renderNavigationBar = <CenteredNavigationBar { ...props } />;    
+            break;
+        default:
+            renderNavigationBar = <CenteredNavigationBar { ...props } />;
+            console.warn("Invalid navigation bar type provided.")
+            break;
+    }
 
-function NavigationBar({ children }: PropsWithChildren<Props>) {
-
-    return (
-        <nav className="navbar">
-           <div>
-            </div>
-            <div className="navbar-links">
-                { children }
-            </div>
-        </nav>
-    )
+    return renderNavigationBar;
 }
 
 export default NavigationBar;
