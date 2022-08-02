@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.navbar {
+    display: grid;
+    padding: 2rem;
+
+    .navbar-links {
+        display: flex;
+        
+        & {
+            margin-right: 2rem;
+        }
+    }
+}

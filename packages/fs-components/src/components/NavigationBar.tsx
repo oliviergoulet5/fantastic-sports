@@ -1,14 +1,25 @@
-import React from "react";
-import "../sass/base/_typography.scss";
-
-interface Props {
-
+interface PageLink {
+    text: string;
+    slug: string;
 }
 
-function NavigationBar({}: Props) {
+interface Props {
+    links: PageLink[];
+}
+
+function NavigationBar({ links }: Props) {
+
+    const renderLinks = links.map(link => 
+        <span>{ link.text }</span>
+    );
+
     return (
-        <nav>
-            Hello, world!
+        <nav className="navbar">
+           <div>
+            </div>
+            <div className="navbar-links">
+                { renderLinks }
+            </div>
         </nav>
     )
 }
