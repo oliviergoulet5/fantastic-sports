@@ -8,10 +8,14 @@ export default {
 }
 
 export const CenteredNavigationBar = () => {
-    return <NavigationBar type="centered">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Community</a>
-        <a href="#">Donate</a>
-    </NavigationBar>
+    return (
+        <NavigationBar 
+            type="centered"
+        >
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Community</a>
+            <a href="#">Donate</a>
+        </NavigationBar>
+    )
 };
