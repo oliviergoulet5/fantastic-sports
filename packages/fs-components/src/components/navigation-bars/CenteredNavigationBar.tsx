@@ -1,6 +1,5 @@
-import { Path } from "../../types";
 import { PropsWithChildren } from "react";
-import isString from "../../utils/isString";
+import { FiMenu } from "react-icons/fi";
 
 interface Props {
     logoRender: JSX.Element;
@@ -17,7 +16,7 @@ function CenteredNavigationBar({ logoRender, children }: PropsWithChildren<Props
                { children } 
             </div>
             <div className="navbar-right">
-            
+                <FiMenu className="navbar-menu-icon" size={26} />
             </div>
         </nav>
     )
