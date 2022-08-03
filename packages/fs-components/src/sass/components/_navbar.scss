@@ -32,6 +32,10 @@ $navbar-menu-breakpoint: $screen-md;
             background-color: get-color(primary, 100);
             animation-timing-function: ease-out;
         }
+
+        @media (min-width: $navbar-menu-breakpoint) {
+            display: none;
+        }
     }
 
     .navbar-left {
