@@ -33,3 +33,10 @@ $theme-mode: light;
         color: $color;
     }
 }
+
+@function get-color($color-palette-name, $key) {
+    $color-palette: map-get($colors, $color-palette-name);
+    $color: map-get($color-palette, $key);
+    
+    @return $color;
+}
