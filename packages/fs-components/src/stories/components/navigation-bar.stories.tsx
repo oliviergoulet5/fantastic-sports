@@ -8,7 +8,7 @@ export default {
 }
 
 export const NavigationBarComponent = () => {
-    return <NavigationBar>
+    return <NavigationBar type="centered">
         <a href="#">Home</a>
         <a href="#">About Us</a>
         <a href="#">Community</a>

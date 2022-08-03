@@ -7,6 +7,7 @@
     .navbar-links {
         display: flex;
         color: black;
+        white-space: nowrap;
         
         a {
             color: black;
@@ -20,5 +21,11 @@
 
     .navbar-links > * {
         margin-right: 2rem;
+    }
+}
+
+.navbar.navbar-centered {
+    @media (min-width: $screen-sm) {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
