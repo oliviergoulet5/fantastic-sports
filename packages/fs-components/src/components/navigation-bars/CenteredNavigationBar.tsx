@@ -1,5 +1,6 @@
 import { Path } from "../../types";
 import { PropsWithChildren } from "react";
+import isString from "../../utils/isString";
 
 interface Props {
     logoRender: JSX.Element;
