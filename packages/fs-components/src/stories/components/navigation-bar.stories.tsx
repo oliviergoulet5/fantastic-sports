@@ -7,7 +7,7 @@ export default {
     component: NavigationBar
 }
 
-export const NavigationBarComponent = () => {
+export const CenteredNavigationBar = () => {
     return <NavigationBar type="centered">
         <a href="#">Home</a>
         <a href="#">About Us</a>

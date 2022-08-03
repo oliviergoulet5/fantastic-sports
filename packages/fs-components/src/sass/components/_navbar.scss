@@ -2,15 +2,17 @@
 
 .navbar {
     display: grid;
-    padding: 2rem;
+    padding: 1.5rem;
+    font-weight: bold;
+    background-color: get-color(primary, 50);
 
     .navbar-links {
         display: flex;
-        color: black;
+        color: get-color(primary, 900);
         white-space: nowrap;
-        
+
         a {
-            color: black;
+            color: get-color(primary, 800);
             text-decoration: none;
 
             &:hover {
