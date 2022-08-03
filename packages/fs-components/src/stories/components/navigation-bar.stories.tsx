@@ -11,6 +11,7 @@ export const CenteredNavigationBar = () => {
     return (
         <NavigationBar 
             type="centered"
+            logo="hello"
         >
             <a href="#">Home</a>
             <a href="#">About Us</a>
