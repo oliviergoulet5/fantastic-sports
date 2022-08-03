@@ -20,7 +20,7 @@ function NavigationBar({ type = "centered", logo, ...props }: PropsWithChildren<
         if (!logo) {
             render = <></>;
         } else if (isString(logo)) {
-            render = <img src={logo as string} alt="Logo" />;
+            render = <img src={logo as string} alt="Logo" className="navbar-logo" />;
         } else {
             render = logo as JSX.Element;
         }
