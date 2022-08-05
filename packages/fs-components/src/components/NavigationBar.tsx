@@ -1,16 +1,17 @@
 import { Path } from "../types";
-import { PropsWithChildren } from "react";
 import CenteredNavigationBar from "./navigation-bars/CenteredNavigationBar";
 import isString from "../utils/isString";
 
 type NavigationBarType = "centered";
 
-interface BaseProps {
+interface Props {
     type?: NavigationBarType; 
     logo?: Path | JSX.Element;
+    links: JSX.Element;
+    _onMenuClick: () => void;
 }
 
-function NavigationBar({ type = "centered", logo, ...props }: PropsWithChildren<BaseProps>) {
+function NavigationBar({ type = "centered", logo, ...props }: Props) {
     let renderNavigationBar: JSX.Element;
     
     const renderLogo = () => {

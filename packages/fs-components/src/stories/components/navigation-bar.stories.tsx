@@ -8,15 +8,14 @@ export default {
 }
 
 export const CenteredNavigationBar = () => {
+    const navlinks = <>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Community</a>
+        <a href="#">Donate</a>
+    
+    </>
     return (
-        <NavigationBar 
-            type="centered"
-            logo="/generic-logo.svg"
-        >
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Community</a>
-            <a href="#">Donate</a>
-        </NavigationBar>
+        <NavigationBar type="centered" logo="/generic-logo.svg" links={ navlinks } _onMenuClick={ () => undefined } />
     )
 };

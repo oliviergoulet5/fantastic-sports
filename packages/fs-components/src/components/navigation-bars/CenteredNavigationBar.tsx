@@ -3,9 +3,10 @@ import { FiMenu } from "react-icons/fi";
 
 interface Props {
     logoRender: JSX.Element;
+    links: JSX.Element;
 }
 
-function CenteredNavigationBar({ logoRender, children }: PropsWithChildren<Props>) {
+function CenteredNavigationBar({ logoRender, links }: Props) {
 
     return (
         <nav className="navbar navbar-centered">
@@ -13,7 +14,7 @@ function CenteredNavigationBar({ logoRender, children }: PropsWithChildren<Props
                 { logoRender }
             </div>
             <div className="navbar-center navbar-links">
-               { children } 
+               { links } 
             </div>
             <div className="navbar-right">
                 <FiMenu className="navbar-menu-icon" size={26} />
