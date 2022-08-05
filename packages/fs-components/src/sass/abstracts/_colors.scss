@@ -1,5 +1,6 @@
 $colors: (
     primary-light: (
+        50: hsl(160, 100%, 98%),
         100: hsl(160, 100%, 95%),
         200: hsl(160, 100%, 90%),
         300: hsl(160, 100%, 80%),
@@ -11,6 +12,7 @@ $colors: (
         900: hsl(160, 100%, 10%)
     ),
     primary-dark: (
+        50: hsl(160, 100%, 2%),
         100: hsl(160, 100%, 10%),
         200: hsl(160, 100%, 20%),
         300: hsl(160, 100%, 30%),
@@ -32,4 +34,11 @@ $theme-mode: light;
     .text-primary-#{$colorNumber} {
         color: $color;
     }
+}
+
+@function get-color($color-palette-name, $key) {
+    $color-palette: map-get($colors, "#{$color-palette-name}-#{$theme-mode}");
+    $color: map-get($color-palette, $key);
+    
+    @return $color;
 }

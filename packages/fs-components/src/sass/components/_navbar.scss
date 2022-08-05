@@ -1,15 +1,63 @@
 @use "../abstracts" as *;
 
+$navbar-menu-breakpoint: $screen-md;
+
 .navbar {
     display: grid;
-    padding: 2rem;
+    padding: 1.5rem;
+    font-weight: bold;
+    background-color: get-color(primary, 50);
+    align-items: center;
+
+    @media (min-width: $navbar-menu-breakpoint) {
+        place-content: space-between;
+    }
+
+    .navbar-logo {
+        height: 2rem;
+        max-height: min-content;
+    }
+
+    .navbar-menu-icon {
+        color: get-color(primary, 800);
+        padding: min(2rem, 20%);
+        max-height: min-content;
+        // Todo: fix padding and how icon goes off content box in navbar
+
+        &:hover {
+            cursor: pointer;
+            border-radius: 999px;
+            animation-name: navbar-menu-icon-hover;
+            animation-duration: 0.25s;
+            background-color: get-color(primary, 100);
+            animation-timing-function: ease-out;
+        }
+
+        @media (min-width: $navbar-menu-breakpoint) {
+            display: none;
+        }
+    }
+
+    .navbar-left {
+        place-self: start;
+    }
+
+    .navbar-right {
+        place-self: end;
+    }
 
     .navbar-links {
-        display: flex;
-        color: black;
-        
+        display: none;
+        color: get-color(primary, 900);
+        white-space: nowrap;
+        place-self: center;
+
+        @media (min-width: $navbar-menu-breakpoint) {
+            display: flex;
+        }
+
         a {
-            color: black;
+            color: get-color(primary, 800);
             text-decoration: none;
 
             &:hover {
@@ -20,5 +68,23 @@
 
     .navbar-links > * {
         margin-right: 2rem;
+    }
+}
+
+.navbar.navbar-centered {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: $navbar-menu-breakpoint) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@keyframes navbar-menu-icon-hover {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        background-color: get-color(primary, 100);
     }
 }

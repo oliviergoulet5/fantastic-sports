@@ -7,11 +7,15 @@ export default {
     component: NavigationBar
 }
 
-export const NavigationBarComponent = () => {
-    return <NavigationBar>
+export const CenteredNavigationBar = () => {
+    const navlinks = <>
         <a href="#">Home</a>
         <a href="#">About Us</a>
         <a href="#">Community</a>
         <a href="#">Donate</a>
-    </NavigationBar>
+    
+    </>
+    return (
+        <NavigationBar type="centered" logo="/generic-logo.svg" links={ navlinks } _onMenuClick={ () => undefined } />
+    )
 };

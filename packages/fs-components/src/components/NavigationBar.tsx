@@ -1,23 +1,45 @@
-import { PropsWithChildren } from "react";
+import { Path } from "../types";
+import CenteredNavigationBar from "./navigation-bars/CenteredNavigationBar";
+import isString from "../utils/isString";
 
-interface PageLink {
-    text: string;
-    slug: string;
+type NavigationBarType = "centered";
+
+interface Props {
+    type?: NavigationBarType; 
+    logo?: Path | JSX.Element;
+    links: JSX.Element;
+    _onMenuClick: () => void;
 }
 
-interface Props {}
+function NavigationBar({ type = "centered", logo, ...props }: Props) {
+    let renderNavigationBar: JSX.Element;
+    
+    const renderLogo = () => {
+        // If path it is a path then render an image. Otherwise it is JSX.
+        let render: JSX.Element;
 
-function NavigationBar({ children }: PropsWithChildren<Props>) {
+        if (!logo) {
+            render = <></>;
+        } else if (isString(logo)) {
+            render = <img src={logo as string} alt="Logo" className="navbar-logo" />;
+        } else {
+            render = logo as JSX.Element;
+        }
 
-    return (
-        <nav className="navbar">
-           <div>
-            </div>
-            <div className="navbar-links">
-                { children }
-            </div>
-        </nav>
-    )
+        return render;
+    }
+    
+    switch(type) {
+        case "centered":
+            renderNavigationBar = <CenteredNavigationBar logoRender={ renderLogo() } { ...props } />;    
+            break;
+        default:
+            renderNavigationBar = <CenteredNavigationBar logoRender={ renderLogo() } { ...props } />;
+            console.warn("Invalid navigation bar type provided.")
+            break;
+    }
+
+    return renderNavigationBar;
 }
 
 export default NavigationBar;
