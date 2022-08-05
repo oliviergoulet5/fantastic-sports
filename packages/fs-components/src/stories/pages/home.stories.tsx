@@ -6,4 +6,4 @@ export default {
     component: Home
 }
 
-export const HomePage = () => <HomePage />;
+export const HomePage = () => <Home />;
