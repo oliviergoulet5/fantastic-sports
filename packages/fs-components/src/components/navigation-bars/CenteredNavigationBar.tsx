@@ -4,9 +4,10 @@ import { FiMenu } from "react-icons/fi";
 interface Props {
     logoRender: JSX.Element;
     links: JSX.Element;
+    _onMenuClick: () => void;
 }
 
-function CenteredNavigationBar({ logoRender, links }: Props) {
+function CenteredNavigationBar({ logoRender, links, _onMenuClick }: Props) {
 
     return (
         <nav className="navbar navbar-centered">
@@ -17,7 +18,7 @@ function CenteredNavigationBar({ logoRender, links }: Props) {
                { links } 
             </div>
             <div className="navbar-right">
-                <FiMenu className="navbar-menu-icon" size={26} />
+                <FiMenu onClick={ _onMenuClick } className="navbar-menu-icon" size={26} />
             </div>
         </nav>
     )
