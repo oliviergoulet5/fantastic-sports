@@ -1,8 +1,6 @@
 {
   "name": "fs-components",
   "version": "1.0.0",
-  "main": "index.ts",
-  "license": "MIT",
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.18.9",
